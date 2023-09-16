@@ -15,7 +15,8 @@ const cors = Cors({
   origin: [
     "https://studio.apollographql.com",
     "http://localhost:3000",
-    "https://localhost",
+    "http://localhost",
+    "capacitor://localhost",
     "https://safemode.vercel.app",
   ],
 });
