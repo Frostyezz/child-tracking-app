@@ -5,7 +5,8 @@ import { MantineProvider } from "@mantine/core";
 import { Provider } from "react-redux";
 import { store } from "@/store";
 import { ApolloProvider } from "@apollo/client";
-import client from "@/apollo";
+import client from "@/common/apollo";
+import "@/common/i18next";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
