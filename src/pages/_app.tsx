@@ -7,6 +7,7 @@ import { store } from "@/store";
 import { ApolloProvider } from "@apollo/client";
 import client from "@/common/apollo";
 import "@/common/i18next";
+import "animate.css";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
