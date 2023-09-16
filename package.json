@@ -11,6 +11,7 @@
     "run:ios": "npx cap sync ios && npm run build && npx cap run ios"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.1",
     "@capacitor/android": "^5.2.3",
     "@capacitor/core": "^5.2.3",
     "@capacitor/ios": "^5.2.3",
@@ -28,20 +29,35 @@
     "@mantine/nprogress": "^6.0.19",
     "@reduxjs/toolkit": "^1.9.5",
     "@tabler/icons-react": "^2.32.0",
+    "@typegoose/typegoose": "^11.4.1",
     "@types/node": "20.5.1",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "apollo-server-micro": "^3.12.0",
+    "bcrypt": "^5.1.1",
+    "class-validator": "^0.14.0",
+    "cookie": "^0.5.0",
+    "cors": "^2.8.5",
     "dayjs": "^1.11.9",
     "embla-carousel-react": "^7.1.0",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
+    "graphql": "^15.8.0",
+    "jose": "^4.14.4",
+    "mongoose": "^7.4.4",
+    "nanoid": "^4.0.2",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.1.2",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1",
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@capacitor/cli": "^5.2.3"
+    "@capacitor/cli": "^5.2.3",
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie": "^0.5.1",
+    "@types/cors": "^2.8.13"
   }
 }
