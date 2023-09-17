@@ -15,7 +15,7 @@ const cors = Cors({
   origin: [
     "https://studio.apollographql.com",
     "http://localhost:3000",
-    "http://localhost",
+    "https://localhost",
     "capacitor://localhost",
     "https://safemode.vercel.app",
   ],
@@ -24,6 +24,8 @@ const cors = Cors({
 function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
   return new Promise((resolve, reject) => {
     fn(req, res, (result: any) => {
+      console.log("Request:", req.url, req.method);
+      console.log("Response:", res.statusCode, res.statusMessage);
       if (result instanceof Error) {
         return reject(result);
       }
