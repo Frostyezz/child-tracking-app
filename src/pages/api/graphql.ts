@@ -62,15 +62,7 @@ export const config = {
 
 const startServer = server.start();
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method == "OPTIONS") {
-    res.setHeader("Allow", "POST");
-    return res.status(202).json({});
-  }
-
+export async function handler(req: NextApiRequest, res: NextApiResponse) {
   await runMiddleware(req, res, cors);
   await dbConnect();
   await startServer;
