@@ -9,17 +9,15 @@ import { Context } from "@/graphql/types/context";
 import { User } from "@/graphql/schemas/user.schema";
 import dbConnect from "@/common/utils/dbConnect";
 
-const corsWhitelist = [
-  "https://studio.apollographql.com",
-  "http://localhost:3000",
-  "https://localhost",
-  "https://safemode.vercel.app",
-];
-
 const cors = Cors({
   methods: ["GET", "HEAD", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   credentials: true,
-  origin: corsWhitelist,
+  origin: [
+    "https://studio.apollographql.com",
+    "http://localhost:3000",
+    "https://localhost",
+    "https://safemode.vercel.app",
+  ],
 });
 
 function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
@@ -27,10 +25,6 @@ function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
     fn(req, res, (result: any) => {
       console.log("Request:", req.url, req.method);
       console.log("Response:", res.statusCode, res.statusMessage);
-
-      if (corsWhitelist.indexOf(req.headers.origin ?? "") !== -1) {
-        res.setHeader("Access-Control-Allow-Origin", req.headers.origin ?? "");
-      }
 
       if (result instanceof Error) {
         return reject(result);
