@@ -15,7 +15,6 @@ const cors = Cors({
   origin: [
     "https://studio.apollographql.com",
     "http://localhost:3000",
-    "https://localhost",
     "https://safemode.vercel.app",
   ],
 });
@@ -49,6 +48,7 @@ const server = new ApolloServer({
       if (decoded) {
         ctx.userId = decoded._id;
         ctx.role = decoded.role;
+        ctx.familyId = decoded.familyId;
       }
     }
     return ctx;
