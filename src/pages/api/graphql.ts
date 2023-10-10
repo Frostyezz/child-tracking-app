@@ -62,7 +62,10 @@ export const config = {
 
 const startServer = server.start();
 
-export async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   await runMiddleware(req, res, cors);
   await dbConnect();
   await startServer;
