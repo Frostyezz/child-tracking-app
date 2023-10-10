@@ -5,10 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "run:android": "npm run build && npx cap sync android && npx cap run android",
-    "run:ios": "npm run build && npx cap sync ios && npx cap run ios"
+    "run:android": "yarn build && yarn export && npx cap sync android && npx cap run android",
+    "run:ios": "yarn build && yarn export && npx cap sync ios && npx cap run ios",
+    "build:android": "yarn build && yarn export && npx cap copy android && npx cap open android",
+    "build:ios": "yarn build && yarn export && npx cap copy ios && npx cap open ios"
   },
   "dependencies": {
     "@apollo/client": "^3.7.9",
