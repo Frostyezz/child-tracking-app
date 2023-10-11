@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Poppins } from "@next/font/google";
+import { Mulish } from "@next/font/google";
 import { MantineProvider } from "@mantine/core";
 import { Provider } from "react-redux";
 import { store } from "@/store";
@@ -11,10 +11,10 @@ import "@/common/i18next";
 import "animate.css";
 import RouterTransition from "@/common/components/RouterTransition/RouterTransition";
 
-const poppins = Poppins({
+const mulish = Mulish({
   preload: true,
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "800", "900"],
+  weight: ["200", "300", "400", "500", "600", "800", "900"],
 });
 
 export default function App(props: AppProps) {
@@ -35,8 +35,8 @@ export default function App(props: AppProps) {
             withGlobalStyles
             withNormalizeCSS
             theme={{
-              fontFamily: poppins.style.fontFamily,
-              headings: { fontFamily: poppins.style.fontFamily },
+              fontFamily: mulish.style.fontFamily,
+              headings: { fontFamily: mulish.style.fontFamily },
               colorScheme: "light",
             }}
           >
