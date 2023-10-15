@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Mulish } from "@next/font/google";
+import { Be_Vietnam_Pro } from "@next/font/google";
 import { MantineProvider } from "@mantine/core";
 import { Provider } from "react-redux";
 import { store } from "@/store";
@@ -9,12 +9,12 @@ import { ApolloProvider } from "@apollo/client";
 import client from "@/common/apollo";
 import "@/common/i18next";
 import "animate.css";
-import RouterTransition from "@/common/components/RouterTransition/RouterTransition";
+import AppLayout from "@/common/components/AppLayout/AppLayout";
 
-const mulish = Mulish({
+const font = Be_Vietnam_Pro({
   preload: true,
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "800", "900"],
+  weight: ["300", "400", "500", "600"],
 });
 
 export default function App(props: AppProps) {
@@ -35,13 +35,14 @@ export default function App(props: AppProps) {
             withGlobalStyles
             withNormalizeCSS
             theme={{
-              fontFamily: mulish.style.fontFamily,
-              headings: { fontFamily: mulish.style.fontFamily },
+              fontFamily: font.style.fontFamily,
+              headings: { fontFamily: font.style.fontFamily },
               colorScheme: "light",
             }}
           >
-            <RouterTransition />
-            <Component {...pageProps} />
+            <AppLayout>
+              <Component {...pageProps} />
+            </AppLayout>
           </MantineProvider>
         </Provider>
       </ApolloProvider>
