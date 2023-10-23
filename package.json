@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently --kill-others \"next dev\" \"yarn generate-routes\"",
     "build": "next build",
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
+    "generate-routes": "node generateRoutes.js",
+    "tunnel": ".\\node_modules\\.bin\\lt --port 3000",
     "run:android": "yarn build && yarn export && npx cap sync android && npx cap run android",
     "run:ios": "yarn build && yarn export && npx cap sync ios && npx cap run ios",
     "build:android": "yarn build && yarn export && npx cap copy android && npx cap open android",
@@ -67,6 +69,9 @@
     "@capacitor/cli": "^5.2.3",
     "@types/bcrypt": "^5.0.0",
     "@types/cookie": "^0.5.1",
-    "@types/cors": "^2.8.13"
+    "@types/cors": "^2.8.13",
+    "concurrently": "^8.2.2",
+    "localtunnel": "^2.0.2",
+    "watchr": "^6.11.0"
   }
 }

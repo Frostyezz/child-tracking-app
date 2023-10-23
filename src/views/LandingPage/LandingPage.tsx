@@ -7,6 +7,7 @@ import Logo from "@/common/components/Logo/Logo";
 import Image from "next/image";
 import { IconArrowBarToRight } from "@tabler/icons-react";
 import useDebouncedRedirect from "@/common/hooks/useDebouncedRedirect";
+import { ROUTES } from "@/common/utils/routes";
 
 const LandingPage: React.FC = () => {
   const { classes, cx } = useLandingPageStyles();
@@ -39,7 +40,7 @@ const LandingPage: React.FC = () => {
           w="max-content"
           variant="light"
           rightIcon={<IconArrowBarToRight />}
-          onClick={() => debouncedRedirect("/s")}
+          onClick={() => debouncedRedirect(ROUTES.FAMILY_ROLE)}
         >
           {t("landing.page.button")}
         </Button>
