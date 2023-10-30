@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 const LandingPage = dynamic(() => import("@/views/LandingPage/LandingPage"), {
   loading: () => <LoadingScreen isLoading />,
+  ssr: false,
 });
 
 const Home: React.FC<NextPage> = () => {

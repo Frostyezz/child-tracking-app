@@ -6,12 +6,6 @@ export const useLandingPageStyles = createStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     width: "100%",
-    height: "100%",
-  },
-  polymorphic: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
+    height: typeof window !== "undefined" ? window.innerHeight : "100vh",
   },
 }));

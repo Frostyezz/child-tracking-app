@@ -9,7 +9,7 @@ import { ApolloProvider } from "@apollo/client";
 import client from "@/common/apollo";
 import "@/common/i18next";
 import "animate.css";
-import AppLayout from "@/common/components/AppLayout/AppLayout";
+import RouterTransition from "@/common/components/RouterTransition/RouterTransition";
 
 const font = Be_Vietnam_Pro({
   preload: true,
@@ -40,9 +40,8 @@ export default function App(props: AppProps) {
               colorScheme: "light",
             }}
           >
-            <AppLayout>
-              <Component {...pageProps} />
-            </AppLayout>
+            <RouterTransition />
+            <Component {...pageProps} />
           </MantineProvider>
         </Provider>
       </ApolloProvider>

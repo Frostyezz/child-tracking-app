@@ -20,7 +20,9 @@ const LandingPage: React.FC = () => {
       fluid
       className={cx(
         classes.wrapper,
-        redirecting ? "animate__animated animate__fadeOut animate__faster" : ""
+        redirecting
+          ? "animate__animated animate__fadeOut animate__faster"
+          : "animate__animated animate__fadeIn"
       )}
     >
       <Image
@@ -28,8 +30,9 @@ const LandingPage: React.FC = () => {
         alt=""
         style={{ objectFit: "cover", zIndex: -1 }}
         fill
+        priority
       />
-      <Flex direction="column" justify="center" h="100%">
+      <Flex direction="column" justify="center" h="90%">
         <Logo size={isMobile ? 0.25 : 0.5} />
         <Title order={isMobile ? 2 : 1} mt={15}>
           {t("landing.page.heading")}
