@@ -2,5 +2,10 @@
   "landing.page.heading": "Welcome to Safemode!",
   "landing.page.heading.caption": "Always connected. Always safe.",
   "landing.page.button": "Get started",
-  "family.role.page.heading": "Which family member are you?"
+  "family.role.page.heading": "Which family member are you?",
+  "family.role.page.caption.desktop": "Click on the family member that you are.",
+  "family.role.page.caption.mobile": "Tap on the family member that you are.",
+  "family.role.page.mom": "Mom",
+  "family.role.page.dad": "Dad",
+  "family.role.page.child": "Child"
 }
