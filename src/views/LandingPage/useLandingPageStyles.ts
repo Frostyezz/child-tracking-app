@@ -6,6 +6,6 @@ export const useLandingPageStyles = createStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     width: "100%",
-    height: typeof window !== "undefined" ? window.innerHeight : "100vh",
+    height: "100%",
   },
 }));

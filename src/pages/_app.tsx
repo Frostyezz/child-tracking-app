@@ -10,6 +10,7 @@ import client from "@/common/apollo";
 import "@/common/i18next";
 import "animate.css";
 import RouterTransition from "@/common/components/RouterTransition/RouterTransition";
+import AppLayout from "@/common/components/AppLayout/AppLayout";
 
 const font = Be_Vietnam_Pro({
   preload: true,
@@ -23,7 +24,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Safemode</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -40,8 +41,10 @@ export default function App(props: AppProps) {
               colorScheme: "light",
             }}
           >
-            <RouterTransition />
-            <Component {...pageProps} />
+            <AppLayout>
+              <RouterTransition />
+              <Component {...pageProps} />
+            </AppLayout>
           </MantineProvider>
         </Provider>
       </ApolloProvider>
