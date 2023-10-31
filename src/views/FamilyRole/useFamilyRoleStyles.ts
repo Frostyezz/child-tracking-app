@@ -2,7 +2,7 @@ import { createStyles, rem } from "@mantine/core";
 
 export const useFamilyRoleStyles = createStyles((theme) => ({
   role: {
-    transition: "all 0.5s ease",
+    transition: "border 0.5s ease",
     borderBottom: "6px solid transparent",
     ":hover": {
       borderBottom: "6px solid #868e96",
@@ -19,14 +19,13 @@ export const useFamilyRoleStyles = createStyles((theme) => ({
   title: {
     fontSize: rem(32),
     fontWeight: 500,
-    animation: "fadeInUp 0.5s ease-in-out 0.2s both",
+    animation: "fadeInUp 0.5s ease-in-out 0.4s both",
     [theme.fn.smallerThan("sm")]: {
       fontSize: rem(26),
       fontWeight: 500,
     },
   },
   caption: {
-    animation: "fadeInUp 0.5s ease-in-out 0.4s both",
-    animationDelay: "0.4s",
+    animation: "fadeInUp 0.5s ease-in-out 0.7s both",
   },
 }));

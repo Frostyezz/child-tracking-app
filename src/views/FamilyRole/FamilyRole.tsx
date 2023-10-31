@@ -4,6 +4,8 @@ import Image from "next/image";
 import useIsMobile from "@/common/hooks/useIsMobile";
 import { useTranslation } from "react-i18next";
 import { useFamilyRoleStyles } from "./useFamilyRoleStyles";
+import SimpleBackIconButton from "@/common/components/SimpleBackIconButton/SimpleBackIconButton";
+import { ROUTES } from "@/common/utils/routes";
 
 enum ROLE {
   MOM = "mom",
@@ -20,6 +22,7 @@ const FamilyRole: React.FC = () => {
 
   return (
     <Flex direction="column" justify="center" align="center" h="100%">
+      <SimpleBackIconButton to={ROUTES.ROOT} />
       <Flex className="animate__animated animate__fadeIn">
         <Image
           onClick={() => setRole(role === ROLE.MOM ? null : ROLE.MOM)}
@@ -49,7 +52,7 @@ const FamilyRole: React.FC = () => {
           alt=""
         />
       </Flex>
-      <Flex>
+      <Flex className="animate__animated animate__fadeIn">
         <Text
           ta="center"
           w={149 * imageRatio}
