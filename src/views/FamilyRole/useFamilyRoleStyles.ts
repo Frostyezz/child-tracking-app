@@ -28,4 +28,7 @@ export const useFamilyRoleStyles = createStyles((theme) => ({
   caption: {
     animation: "fadeInUp 0.5s ease-in-out 0.7s both",
   },
+  button: {
+    transition: "opacity 0.3s ease",
+  },
 }));

@@ -41,7 +41,7 @@ export default function App(props: AppProps) {
               colorScheme: "light",
             }}
           >
-            <RouterTransition />
+            {/* <RouterTransition /> */}
             <AppLayout>
               <Component {...pageProps} />
             </AppLayout>

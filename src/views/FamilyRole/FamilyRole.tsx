@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { Flex, Text, Title } from "@mantine/core";
+import { Button, Flex, Text, Title } from "@mantine/core";
 import Image from "next/image";
 import useIsMobile from "@/common/hooks/useIsMobile";
 import { useTranslation } from "react-i18next";
@@ -89,6 +89,17 @@ const FamilyRole: React.FC = () => {
           {t(`family.role.page.caption.${isMobile ? "mobile" : "desktop"}`)}
         </Text>
       </Flex>
+      <Button
+        className={classes.button}
+        style={{
+          opacity: role ? 1 : 0,
+          pointerEvents: role ? "auto" : "none",
+          cursor: role ? "pointer" : "default",
+        }}
+        mt={30}
+      >
+        {t("common.actions.continue")}
+      </Button>
     </Flex>
   );
 };
