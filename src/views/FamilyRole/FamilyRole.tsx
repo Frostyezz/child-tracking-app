@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useFamilyRoleStyles } from "./useFamilyRoleStyles";
 import SimpleBackIconButton from "@/common/components/SimpleBackIconButton/SimpleBackIconButton";
 import { ROUTES } from "@/common/utils/routes";
+import useDebouncedRedirect from "@/common/hooks/useDebouncedRedirect";
 
 enum ROLE {
   MOM = "mom",
@@ -19,9 +20,16 @@ const FamilyRole: React.FC = () => {
   const imageRatio = useMemo(() => (isMobile ? 0.5 : 0.75), [isMobile]);
   const { t } = useTranslation();
   const { classes, cx } = useFamilyRoleStyles();
+  const { debouncedRedirect, redirecting } = useDebouncedRedirect();
 
   return (
-    <Flex direction="column" justify="center" align="center" h="100%">
+    <Flex
+      direction="column"
+      justify="center"
+      align="center"
+      h="100%"
+      className={redirecting ? "animate__animated animate__fadeOut" : ""}
+    >
       <SimpleBackIconButton to={ROUTES.ROOT} />
       <Flex className="animate__animated animate__fadeIn">
         <Image
@@ -90,6 +98,7 @@ const FamilyRole: React.FC = () => {
         </Text>
       </Flex>
       <Button
+        onClick={() => debouncedRedirect(ROUTES.REGISTER_PARENT)}
         className={classes.button}
         style={{
           opacity: role ? 1 : 0,
