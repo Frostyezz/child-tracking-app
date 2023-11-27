@@ -1,10 +1,11 @@
 import React from "react";
 import StepCarousel from "./components/StepCarousel";
+import ParentRegisterAccount from "./components/ParentRegisterAccount";
 
 const ParentRegister: React.FC = () => {
   return (
     <StepCarousel>
-      <div>sd</div>
+      <ParentRegisterAccount />
       <div>saa</div>
     </StepCarousel>
   );

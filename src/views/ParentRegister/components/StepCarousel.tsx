@@ -41,6 +41,7 @@ const StepCarousel: React.FC<StepCarouselProps> = ({ children }) => {
         getEmblaApi={setEmbla}
         withIndicators={false}
         withControls={false}
+        draggable={false}
         withKeyboardEvents={false}
       >
         {children?.map((child, index) => (
