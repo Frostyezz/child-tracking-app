@@ -7,7 +7,7 @@ Safemode is a mobile and web application designed to help parents monitor their 
 - **Real-Time Location Tracking**: The app provides live updates on the child's location, allowing parents to monitor movements in real-time.
 - **Location History**: Parents can view a history of their child's locations over a specified period, making it easy to track past movements.
 - **Cross-Platform Support**: The app is built to run on both Android and iOS devices using Capacitor, ensuring wide accessibility.
-- **Multi-Language Support**: Integrated with `i18next`, the app supports multiple languages, making it usable for a diverse audience.
+- **Multi-Language Support**: Integrated with i18next, the app supports multiple languages, making it usable for a diverse audience.
 - **Secure Authentication**: The app features an in-house authentication system using JWT.
 
 ### Technology Stack
@@ -16,7 +16,7 @@ Safemode is a mobile and web application designed to help parents monitor their 
 - **State Management**: Utilizes Redux Toolkit for managing application state efficiently.
 - **GraphQL API**: Powered by Apollo Client and Server, the app uses GraphQL to efficiently query and manage data.
 - **Database**: Typegoose is used with MongoDB for data persistence, ensuring scalable and flexible data storage.
-- **Backend**: The backend is handled using microservices, with `micro` providing a lightweight framework for the server.
+- **Backend**: The backend is handled using microservices, with micro providing a lightweight framework for the server.
 - **Mobile Integration**: Leveraging Capacitor, the app integrates seamlessly with native Android and iOS functionalities.
 - **Form Handling**: The app uses Mantine's form and UI components to ensure a smooth and user-friendly experience.
 
