@@ -1,38 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Safemode
 
-## Getting Started
+Safemode is a mobile and web application designed to help parents monitor their children's real-time location and track location history. The app ensures that parents can always stay informed about their children's whereabouts, enhancing safety and peace of mind.
 
-First, run the development server:
+### Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Real-Time Location Tracking**: The app provides live updates on the child's location, allowing parents to monitor movements in real-time.
+- **Location History**: Parents can view a history of their child's locations over a specified period, making it easy to track past movements.
+- **Cross-Platform Support**: The app is built to run on both Android and iOS devices using Capacitor, ensuring wide accessibility.
+- **Multi-Language Support**: Integrated with `i18next`, the app supports multiple languages, making it usable for a diverse audience.
+- **Secure Authentication**: The app features an in-house authentication system using JWT.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Technology Stack
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Built with Next.js (pages directory).
+- **State Management**: Utilizes Redux Toolkit for managing application state efficiently.
+- **GraphQL API**: Powered by Apollo Client and Server, the app uses GraphQL to efficiently query and manage data.
+- **Database**: Typegoose is used with MongoDB for data persistence, ensuring scalable and flexible data storage.
+- **Backend**: The backend is handled using microservices, with `micro` providing a lightweight framework for the server.
+- **Mobile Integration**: Leveraging Capacitor, the app integrates seamlessly with native Android and iOS functionalities.
+- **Form Handling**: The app uses Mantine's form and UI components to ensure a smooth and user-friendly experience.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Development and Deployment
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Development Tools**: The app is developed using modern JavaScript tooling, including TypeScript for type safety, ESLint for linting, and concurrently for running multiple commands.
+- **Build and Deployment**: The app is built using Next.js commands for both web and mobile platforms, with dedicated scripts for Android and iOS builds.
+- **Testing and Tunneling**: Local testing and development are facilitated by localtunnel, allowing external access to the app during development.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This app combines modern web and mobile development practices to create a secure, reliable, and user-friendly solution for child tracking, offering peace of mind to parents and guardians.
